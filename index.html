@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Rihem Akkari — Threat intelligence, language models, critical theory</title>
+  <meta name="description" content="Rihem Akkari is a cybersecurity engineer working across threat intelligence, NLP/LLMs and the critical theory of technology.">
+  <meta name="author" content="Rihem Akkari">
+  <meta name="color-scheme" content="dark light">
+  <meta name="theme-color" content="#100f0d">
+  <link rel="canonical" href="https://rihemakkari.github.io/">
+
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://rihemakkari.github.io/">
+  <meta property="og:title" content="Rihem Akkari">
+  <meta property="og:description" content="Cybersecurity engineer. Threat intelligence, NLP/LLMs and the critical theory of technology.">
+  <!-- TODO: add a 1200x630 image at assets/img/og-image.png, then uncomment
+  <meta property="og:image" content="https://rihemakkari.github.io/assets/img/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  -->
+
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="assets/fonts/fraunces-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/style.css">
+  <script>
+    // Apply a saved theme before first paint to avoid a flash.
+    try {
+      var t = localStorage.getItem('theme');
+      if (t === 'light' || t === 'dark') document.documentElement.dataset.theme = t;
+    } catch (e) {}
+  </script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <a class="wordmark" href="#top">Rihem Akkari</a>
+    <nav aria-label="Sections">
+      <ul>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#writing">Writing</a></li>
+        <li><a href="#beyond">Beyond</a></li>
+        <li><a href="#cv">CV</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <button class="theme-toggle" type="button" hidden>
+      <span class="theme-toggle__label">Light</span>
+    </button>
+  </header>
+
+  <main id="main">
+
+    <!-- HERO -->
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <p class="eyebrow">Cybersecurity engineer · ESPRIT, highest honours</p>
+      <!-- TODO: this thesis sentence is a draft. Rewrite it in your own words. -->
+      <h1 id="hero-title">
+        I study how machines read threats, <em>and what that reading does to us.</em>
+      </h1>
+      <p class="threads">
+        <span>threat intelligence</span>
+        <span aria-hidden="true">×</span>
+        <span>NLP / LLMs</span>
+        <span aria-hidden="true">×</span>
+        <span>critical theory of technology</span>
+      </p>
+      <div class="hero__foot">
+        <p class="lede">
+          I work at the intersection of cybersecurity, AI and the social and political implications of digital technologies, with a focus on threat intelligence, information manipulation and digital sovereignty. My research is driven by a central question: How do digital systems shape information, knowledge and power, and how can we understand and mitigate their effects on human cognition, societal autonomy and collective decision-making?
+          Currently seeking research roles in Paris.
+        </p>
+        <p class="actions">
+          <a class="button" href="assets/cv/Rihem-Akkari-CV.pdf" download>Download CV</a>
+          <a class="button button--quiet" href="#contact">Get in touch</a>
+        </p>
+      </div>
+    </section>
+
+    <!-- §01 PROJECTS -->
+    <section class="section" id="projects" aria-labelledby="projects-title">
+      <header class="section__head">
+        <p class="section__num" aria-hidden="true">§01</p>
+        <h2 id="projects-title">Projects</h2>
+        <p class="section__note">Case files. Each one states the problem before the solution.</p>
+      </header>
+
+      <div class="section__body files">
+
+        <article class="file">
+          <header class="file__head">
+            <p class="file__id">File 01 · 2026</p>
+            <h3>DarkWatch: dark-web threat intelligence platform (ANCS)</h3>
+          </header>
+          <dl>
+            <div><dt>Problem</dt><dd>Ransomware claims and credential leaks about national organisations surface on dark-web forums and leak sites, scattered and hard to track systematically.</dd></div>
+            <div><dt>What I built</dt><dd>A pipeline that collects from 14 sources, deduplicates findings, classifies them into 6 threat categories with an NLP model, and triages them by severity, with a SOC integration prepared via webhook.</dd></div>
+            <div><dt>Stack</dt><dd><ul class="tags"><li>Python</li><li>scikit-learn (TF-IDF + logistic regression)</li><li>Security Onion</li></ul></dd></div>
+            <div><dt>Result</dt><dd>108 unique findings (6 critical, 35 high) from 127 collected; 82.6% classifier accuracy; supervisor evaluation 19/20.</dd></div>
+          </dl>
+        </article>
+
+        <article class="file">
+          <header class="file__head">
+            <p class="file__id">File 02 · 2025</p>
+            <h3>SOC deployment, Clinique Hannibal</h3>
+          </header>
+          <dl>
+            <div><dt>Problem</dt><dd>A clinic handling sensitive patient data needed centralised visibility over security events across its machines.</dd></div>
+            <div><dt>What I built</dt><dd>A full SOC: log collection, correlation and alerting across 50+ endpoints.</dd></div>
+            <div><dt>Stack</dt><dd><ul class="tags"><li>Wazuh</li><li>Elasticsearch</li><li>Kibana</li></ul></dd></div>
+            <div><dt>Result</dt><dd>Mean time to detect under 5 minutes.</dd></div>
+          </dl>
+        </article>
+
+        <article class="file">
+          <header class="file__head">
+            <p class="file__id">File 03 · 2024</p>
+            <h3>Phishing detection with NLP, Orange Tunisie</h3>
+          </header>
+          <dl>
+            <div><dt>Problem</dt><dd>Phishing emails slipping past existing filters.</dd></div>
+            <div><dt>What I built</dt><dd>An NLP classification model trained on 8,000+ real emails.</dd></div>
+            <div><dt>Stack</dt><dd><ul class="tags"><li>Python</li><li>scikit-learn</li><li>NLTK</li></ul></dd></div>
+            <div><dt>Result</dt><dd>85% precision.</dd></div>
+          </dl>
+        </article>
+
+        <article class="file">
+          <header class="file__head">
+            <p class="file__id">File 04 · 2024</p>
+            <h3>Autonomous pentesting agent, BNA Assurances</h3>
+          </header>
+          <dl>
+            <div><dt>Problem</dt><dd>Penetration tests are slow and repetitive to run by hand.</dd></div>
+            <div><dt>What I built</dt><dd>An agent that uses GPT-4 to plan an engagement and orchestrate standard tools.</dd></div>
+            <div><dt>Stack</dt><dd><ul class="tags"><li>GPT-4</li><li>Nmap &amp; Metasploit</li><li>OWASP ZAP</li></ul></dd></div>
+            <div><dt>Result</dt><dd>Cut analysis time by 60% by automatically classifying and prioritising findings.</dd></div>
+          </dl>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- §02 WRITING & RESEARCH -->
+    <section class="section" id="writing" aria-labelledby="writing-title">
+      <header class="section__head">
+        <p class="section__num" aria-hidden="true">§02</p>
+        <h2 id="writing-title">Writing &amp; research</h2>
+        <p class="section__note">A working paper, essays and a workshop.</p>
+      </header>
+
+      <ol class="section__body biblio">
+        <li class="entry">
+          <p class="entry__meta"><time datetime="2026">2026</time> <span class="kind">Working paper</span></p>
+          <div>
+            <h3>DARKWATCH: A Threat Intelligence Architecture for Dark Web Monitoring and Its Implications for Geopolitical Power Asymmetries</h3>
+            <p class="entry__venue">Unpublished · Available on request</p>
+            <p>Presents DarkWatch's NLP architecture for dark-web monitoring and argues that threat intelligence is geopolitical infrastructure, in which the Global South is mostly observed rather than observing.</p>
+          </div>
+        </li>
+        <li class="entry">
+          <p class="entry__meta"><time datetime="2025-12">Dec 2025</time> <span class="kind">Essay</span></p>
+          <div>
+            <h3><a href="https://medium.com/@rihemakkari/we-all-look-the-same-now-notes-on-the-algorithmic-production-of-sameness-9c841b432b86">We All Look the Same Now: Notes on the Algorithmic Production of Sameness</a></h3>
+            <p class="entry__venue">Medium</p>
+            <p>A Barthesian reading of platform culture: feeds reward legibility over difference, so identity becomes a template we select rather than invent.</p>
+          </div>
+        </li>
+        <li class="entry">
+          <p class="entry__meta"><time datetime="2025-12">Dec 2025</time> <span class="kind">Essay</span></p>
+          <div>
+            <h3><a href="https://medium.com/@rihemakkari/digital-fortresses-and-invisible-chains-5268ffb62903">Digital Fortresses and Invisible Chains: A Political Anatomy of Cybersecurity</a></h3>
+            <p class="entry__venue">Medium</p>
+            <p>Written from inside the profession, it asks whom security actually protects, from cloud platforms to biometric borders, and sketches a "radical security" grounded in collective care.</p>
+          </div>
+        </li>
+        <li class="entry">
+          <p class="entry__meta"><time datetime="2026-06">June 2026</time> <span class="kind">Zine workshop</span></p>
+          <div>
+            <h3>Where We Come From</h3>
+            <p class="entry__venue">Bonn, Germany</p>
+            <p>Curated by Bonn Climate Camp and Entertainment + Culture Pavilion. A collaborative zine-making workshop exploring one's identity through collage, drawing, writing and collective reflection.</p>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <!-- §03 BEYOND CODE -->
+    <section class="section" id="beyond" aria-labelledby="beyond-title">
+      <header class="section__head">
+        <p class="section__num" aria-hidden="true">§03</p>
+        <h2 id="beyond-title">Beyond code</h2>
+        <p class="section__note">The same questions, asked with other tools.</p>
+      </header>
+
+      <div class="section__body sheet">
+        <article class="frame">
+          <p class="frame__num" aria-hidden="true">A</p>
+          <h3>Curated exhibitions</h3>
+          <ul class="frame__list">
+            <li><cite>Nature in Peril</cite>, Tunisia, 2023</li>
+            <li><cite>Climax: Captures of a rising climate</cite>, Bonn, Germany, 2025</li>
+          </ul>
+        </article>
+        <article class="frame">
+          <p class="frame__num" aria-hidden="true">B</p>
+          <h3>Climate activism</h3>
+          <p>Party delegate at COP27, COP28, SB60 and SB62.</p>
+        </article>
+        <article class="frame">
+          <p class="frame__num" aria-hidden="true">C</p>
+          <h3>Critical theory essays</h3>
+          <p>These draw on thinkers such as Foucault, Derrida, Deleuze, Benjamin and Lacan to explore power, ideology, technological alienation, digital capitalism and the politics of knowledge through a decolonial and interdisciplinary lens. These reflections live on my Medium account.</p>
+          <p class="frame__link"><a href="https://medium.com/@rihemakkari">Read<span class="visually-hidden"> the essays</span></a></p>
+        </article>
+      </div>
+    </section>
+
+    <!-- §04 CV -->
+    <section class="section" id="cv" aria-labelledby="cv-title">
+      <header class="section__head">
+        <p class="section__num" aria-hidden="true">§04</p>
+        <h2 id="cv-title">CV</h2>
+      </header>
+
+      <div class="section__body cv">
+        <ul class="cv__lines">
+          <li><span class="kind">Education</span> <span>Engineering degree in cybersecurity, ESPRIT, highest honours, 2026</span></li>
+          <li><span class="kind">Experience</span> <span>Threat-intelligence engineer at ANCS, Tunisia’s national cybersecurity agency; previously SOC and NLP work at Clinique Hannibal, Orange Tunisie and BNA Assurances.</span></li>
+          <li><span class="kind">Focus</span> <span>Threat intelligence, NLP/LLMs, critical theory of technology</span></li>
+        </ul>
+        <p><a class="button" href="assets/cv/Rihem-Akkari-CV.pdf" download>Download CV <span class="button__meta">PDF</span></a></p>
+      </div>
+    </section>
+
+    <!-- §05 CONTACT -->
+    <section class="section" id="contact" aria-labelledby="contact-title">
+      <header class="section__head">
+        <p class="section__num" aria-hidden="true">§05</p>
+        <h2 id="contact-title">Contact</h2>
+        <p class="section__note">Open to research roles, collaborations and conversations.</p>
+      </header>
+
+      <ul class="section__body contact">
+        <li><span class="kind">Email</span> <a href="mailto:akkaririhem71@gmail.com">akkaririhem71@gmail.com</a></li>
+        <!-- TODO: confirm this is your GitHub username. -->
+        <li><span class="kind">GitHub</span> <a href="https://github.com/rihemakkari" rel="me">github.com/rihemakkari</a></li>
+        <li><span class="kind">LinkedIn</span> <a href="https://www.linkedin.com/in/rihem-akkari" rel="me">linkedin.com/in/rihem-akkari</a></li>
+      </ul>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <p>© 2026 Rihem Akkari</p>
+    <p>Set in Fraunces and JetBrains Mono. No trackers, no cookies.</p>
+    <p>Last updated <time datetime="2026-10">October 2026</time></p>
+  </footer>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>
