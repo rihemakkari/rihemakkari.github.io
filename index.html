@@ -90,19 +90,33 @@
         <article class="file">
           <header class="file__head">
             <p class="file__id">File 01 · 2026</p>
+            <h3>YT Trace: local-first browser extension for studying your own platform traces</h3>
+          </header>
+          <dl>
+            <div><dt>Problem</dt><dd>Studying how a platform shapes what we watch usually means handing your viewing data to someone else's server. I wanted a way to observe my own YouTube traces while keeping every record on my machine.</dd></div>
+            <div><dt>What I built</dt><dd>A Chrome extension that detects each video I watch (including YouTube's in-app navigation), records title, channel, start time and seconds actually watched, and shows them as a day-by-day timeline, a minutes-per-day chart and top channels. Data can be exported as JSON or wiped in one click.</dd></div>
+            <div><dt>Stack</dt><dd><ul class="tags"><li>TypeScript</li><li>Manifest V3</li><li>chrome.storage.local</li></ul></dd></div>
+            <div><dt>Result</dt><dd>Fully local: no server, no network requests, only the "storage" and youtube.com permissions. Open source.</dd></div>
+          </dl>
+          <p class="file__link"><a href="https://github.com/rihemakkari/yt-trace">View on GitHub<span class="visually-hidden">: YT Trace</span></a></p>
+        </article>
+
+        <article class="file">
+          <header class="file__head">
+            <p class="file__id">File 02 · 2026</p>
             <h3>DarkWatch: dark-web threat intelligence platform (ANCS)</h3>
           </header>
           <dl>
             <div><dt>Problem</dt><dd>Ransomware claims and credential leaks about national organisations surface on dark-web forums and leak sites, scattered and hard to track systematically.</dd></div>
-            <div><dt>What I built</dt><dd>A pipeline that collects from 14 sources, deduplicates findings, classifies them into 6 threat categories with an NLP model, and triages them by severity, with a SOC integration prepared via webhook.</dd></div>
-            <div><dt>Stack</dt><dd><ul class="tags"><li>Python</li><li>scikit-learn (TF-IDF + logistic regression)</li><li>Security Onion</li></ul></dd></div>
+            <div><dt>What I built</dt><dd>A collection pipeline that crawls 14 dark-web, leak-site and OSINT sources through Tor with Playwright, extracts entities with spaCy, deduplicates findings, classifies them into 6 threat categories, and serves them through a FastAPI backend, with a SOC integration prepared via webhook.</dd></div>
+            <div><dt>Stack</dt><dd><ul class="tags"><li>Playwright &amp; Tor</li><li>spaCy &amp; scikit-learn</li><li>FastAPI &amp; PostgreSQL</li></ul></dd></div>
             <div><dt>Result</dt><dd>108 unique findings (6 critical, 35 high) from 127 collected; 82.6% classifier accuracy; supervisor evaluation 19/20.</dd></div>
           </dl>
         </article>
 
         <article class="file">
           <header class="file__head">
-            <p class="file__id">File 02 · 2025</p>
+            <p class="file__id">File 03 · 2025</p>
             <h3>SOC deployment, Clinique Hannibal</h3>
           </header>
           <dl>
@@ -115,7 +129,7 @@
 
         <article class="file">
           <header class="file__head">
-            <p class="file__id">File 03 · 2024</p>
+            <p class="file__id">File 04 · 2024</p>
             <h3>Phishing detection with NLP, Orange Tunisie</h3>
           </header>
           <dl>
@@ -128,7 +142,7 @@
 
         <article class="file">
           <header class="file__head">
-            <p class="file__id">File 04 · 2024</p>
+            <p class="file__id">File 05 · 2024</p>
             <h3>Autonomous pentesting agent, BNA Assurances</h3>
           </header>
           <dl>
